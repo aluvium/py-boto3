@@ -15,3 +15,4 @@ def ec2_list_cl(alice, betty):
 
 ec2_list_cl('InstanceId','PublicIpAddress')
 
+# if 0 instances it returns error ==> no IP -,- 
