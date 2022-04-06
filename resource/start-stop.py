@@ -25,13 +25,14 @@ PRESS:  - - - - - - - - - - -
         system('clear')
         print("Starting ec2 instance...")
         chosen_inst.start()
-
+        chosen_inst.wait_until_running()  
     elif opt==2:
         inst_id=input('Please specify EC2 id: ')
         chosen_inst=EC2_RE.Instance(inst_id)
         system('clear')
         print("Stopping ec2 instance...")
         chosen_inst.stop()
+        chosen_inst.wait_until_stopped()
 
     elif opt==3:
         inst_id=input('Please specify EC2 id: ')
@@ -39,6 +40,8 @@ PRESS:  - - - - - - - - - - -
         system('clear')
         print("Terminating ec2 instance...")
         chosen_inst.terminate()
+        chosen_inst.wait_until_terminated()
+        
 
     elif opt==4:
         system('clear')
