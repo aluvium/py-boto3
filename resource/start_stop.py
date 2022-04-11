@@ -1,6 +1,7 @@
 import boto3 
 import sys
 from os import system
+from ec2_list import ec2_list
 
 AWS_M_CON=boto3.session.Session(profile_name="root")
 EC2_RE=AWS_M_CON.resource("ec2", "eu-central-1")
@@ -25,6 +26,7 @@ PRESS:  - - - - - - - - - - -
 
 -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
     """)
+        ec2_list()
         opt=int(input("Enter the number: "))
         if opt==1:
             chosen_inst=input_1()
