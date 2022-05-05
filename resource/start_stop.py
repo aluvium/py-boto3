@@ -50,6 +50,8 @@ PRESS:  - - - - - - - - - - -
         else:
             print("Your input is invalid. Try again.")
     return None
-main()
+
+if __name__=="__main__":
+    main()
 
 
